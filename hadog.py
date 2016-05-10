@@ -20,7 +20,7 @@ from os import system
 #docker socket runs on
 DOCKER_SOCKET_PORT = '4243'
 
-MARATHON_URL = 'http://192.168.1.235:8080'
+MARATHON_URL = 'http://83.212.124.105:8080'
 INTERVAL = 10
 
 #=============-------------
@@ -163,7 +163,7 @@ def create_marathon_objects():
 
     #fetch data from marathon
     headers = {'Content-Type': 'application/json'}
-    r = requests.get('http://192.168.1.235:8080/v2/apps', headers = headers)
+    r = requests.get('http://83.212.124.105:8080/v2/apps', headers = headers)
     jdata = r.json()['apps']
 
     marathon_app_objects = []
