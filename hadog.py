@@ -192,7 +192,7 @@ def create_all_frontends_backends_for_haproxy(app_object):
         hastring += "\nmode tcp"
         if 'marathon_app_10000' in app_object.front_back_names[i]:
             #insert http check to string
-            hastring += "\noption httpchk GET /challenge/rest/challenges/10490132"
+            hastring += "\noption httpchk GET /health/check"
             hastring += "\nhttp-check disable-on-404"
         for j in xrange(len(app_object.hosts_ports)):
             # j is port group index
